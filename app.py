@@ -93,11 +93,12 @@ input_encoded[numerical_cols] = scaler.fit_transform(
 
 if st.button("🩺 Predict Heart Disease Risk"):
     prediction = model.predict(input_encoded)[0]
-    if prediction == 1:
+    if prediction == 0:
         st.error(
             " High risk of Heart Disease detected! Please consult a cardiologist.")
     else:
         st.success(" No signs of Heart Disease detected.")
 
 st.markdown("---")
+
 st.caption("Developed by **Vikas Sharma** | © 2025 | Machine Learning Project")
